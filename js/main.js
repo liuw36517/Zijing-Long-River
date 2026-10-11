@@ -20,6 +20,24 @@ createPlants
 }
 from "./ecosystem.js";
 
+import {
+createDayNight
+}
+from "./daynight.js";
+
+
+import {
+createWeather
+}
+from "./weather.js";
+
+
+import {
+createAnimals,
+updateAnimals
+}
+from "./animalAI.js";
+
 
 const canvas =
 document.querySelector("#world");
@@ -116,7 +134,20 @@ sun.position.set(
 
 scene.add(sun);
 
+createDayNight(
+scene,
+sun
+);
 
+
+createWeather(
+scene
+);
+
+
+createAnimals(
+scene
+);
 
 /*
 创建森林
@@ -164,6 +195,7 @@ animate
 camera.position.z -=0.02;
 
 updateFish();
+updateAnimals(); 
 
 renderer.render(
 scene,
