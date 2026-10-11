@@ -8,7 +8,17 @@ from "./forest.js";
 
 import {createRiver}
 from "./river.js";
+import {
+createFish,
+updateFish
+}
+from "./fishAI.js";
 
+
+import {
+createPlants
+}
+from "./ecosystem.js";
 
 
 const canvas =
@@ -112,19 +122,28 @@ scene.add(sun);
 创建森林
 */
 
-
 createForest(scene);
-
 
 
 /*
 创建河流
 */
 
-
 createRiver(scene);
 
 
+/*
+创建鱼群
+*/
+
+createFish(scene);
+
+
+/*
+创建水草生态
+*/
+
+createPlants(scene);
 
 
 
@@ -144,7 +163,7 @@ animate
 
 camera.position.z -=0.02;
 
-
+updateFish();
 
 renderer.render(
 scene,
