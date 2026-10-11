@@ -134,20 +134,6 @@ sun.position.set(
 
 scene.add(sun);
 
-createDayNight(
-scene,
-sun
-);
-
-
-createWeather(
-scene
-);
-
-
-createAnimals(
-scene
-);
 
 /*
 创建森林
@@ -171,10 +157,32 @@ createFish(scene);
 
 
 /*
-创建水草生态
+创建水草
 */
 
 createPlants(scene);
+
+
+/*
+创建动物
+*/
+
+createAnimals(scene);
+
+
+/*
+环境系统
+*/
+
+createDayNight(
+scene,
+sun
+);
+
+
+createWeather(
+scene
+);
 
 
 
